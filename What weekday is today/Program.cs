@@ -17,12 +17,15 @@ namespace What_weekday_is_today
 
                 // Get number of month
                 getMonthFromUser(out int month);
-                
+
                 // Get number of day
                 getDayFromUser(isLeapYear, month, out int day);
-                
+
+                // Calculate the day of the week from date with mathematic algorithm
+                //calDayOfWeekMatAlgorithm(year, month, day, isLeapYear);
+               
                 // Calculate the day of the week from date
-                calDayOfWeek(year, month, day, isLeapYear);
+                calDayOfWeek(year, month, day);
 
                 // Ask for loop program
                 loop = askForRunAgain();
@@ -41,22 +44,7 @@ namespace What_weekday_is_today
                     if (number >= 1900)
                     {
                         // for check is leap year
-                        if (number % 4 != 0)
-                        {
-                            isLeap = false;
-                        }
-                        else if (number % 100 != 0)
-                        {
-                            isLeap = true;
-                        }
-                        else if (number % 400 != 0)
-                        {
-                            isLeap = false;
-                        }
-                        else
-                        {
-                            isLeap = true;
-                        }
+                        isLeap = IsLeapYear(number);
                         year = number;
                         break;
                     }
@@ -134,8 +122,8 @@ namespace What_weekday_is_today
             }
         }
 
-        // function for calculate the day of the week from date
-        private static void calDayOfWeek(int year, int month, int day, bool isLeapYear)
+        // function for calculate the day of the week from date with mathematic algorithm
+        private static void calDayOfWeekMatAlgorithm(int year, int month, int day, bool isLeapYear)
         {
             // m is the shifted month (1 = March, ..., 10 = December, 11 = Jan, 12 = Feb) Treat Jan & Feb as months of the preceding year
             int[] m = { 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -164,6 +152,61 @@ namespace What_weekday_is_today
             }
 
             Console.WriteLine($"The weekday of the input date is {dayOfWeek[Math.Abs((int)W)]}");
+        }
+
+        // function for calculate the day of the week from date
+        private static void calDayOfWeek(int year, int month, int day)
+        {
+            int countLeapYear = 0;
+            int dayDif = 0;
+            int[] month30Day = { 4, 6, 9, 11 }; // array of month that have 30 days.
+
+            for (int i = 1900; i < year; i++)
+            {
+                countLeapYear += IsLeapYear(i) ? 1 : 0;
+            }
+
+            dayDif += ((year - 1900) * 365) + countLeapYear;
+
+            for (int idxMonth = 1; idxMonth <= month; idxMonth++)
+            {
+                if (idxMonth == month)
+                {
+                    dayDif += day - 1;
+                }
+                else if (idxMonth == 2)
+                {
+                    dayDif += IsLeapYear(year) ? 29 : 28;
+                }
+                else
+                {
+                    dayDif += month30Day.Contains(idxMonth) ? 30 : 31;
+                }
+            }
+
+            int idxDayOfWeek = dayDif % 7;
+
+            Console.WriteLine($"The weekday of the input date is {dayOfWeek[(idxDayOfWeek + 1) > 6 ? 0 : (idxDayOfWeek + 1)]}");
+        }
+
+        private static bool IsLeapYear(int year)
+        {
+            if (year % 4 != 0)
+            {
+                return false;
+            }
+            else if (year % 100 != 0)
+            {
+                return true;
+            }
+            else if (year % 400 != 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         // function for looping program
