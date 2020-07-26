@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "What weekday is today/1.0.0": {
+        "runtime": {
+          "What weekday is today.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "What weekday is today/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

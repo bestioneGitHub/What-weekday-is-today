@@ -1,0 +1,13 @@
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.exe
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.deps.json
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.runtimeconfig.json
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.runtimeconfig.dev.json
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.dll
+D:\Technical Test\What weekday is today\What weekday is today\bin\Debug\netcoreapp3.1\What weekday is today.pdb
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.csprojAssemblyReference.cache
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.AssemblyInfoInputs.cache
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.AssemblyInfo.cs
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.csproj.CoreCompileInputs.cache
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.dll
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.pdb
+D:\Technical Test\What weekday is today\What weekday is today\obj\Debug\netcoreapp3.1\What weekday is today.genruntimeconfig.cache
